@@ -9,13 +9,10 @@ const port = argPort ? Number(argPort) : DEFAULT_PORT;
 
 const app = new Application();
 const route = new Router();
-route.get("/", (context) => {
-  context.response.body = "test";
-});
 
 app.use(router.routes());
 app.use(router.allowedMethods());
-app.use(route.routes());
-app.use(route.allowedMethods());
+
+console.log(`Server is running on port ${port}`);
 
 await app.listen({ port });
