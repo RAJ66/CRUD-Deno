@@ -1,1 +1,1 @@
-deno run --allow-read --allow-net${PORT} --cached-only  port=${PORT} api/app.ts
+web: deno run --allow-read --allow-net${PORT} --cached-only  port=${PORT} api/app.ts
