@@ -9,8 +9,8 @@ const port = argPort ? Number(argPort) : DEFAULT_PORT;
 
 const app = new Application();
 const route = new Router();
-route.get("/", ({ response }: { response: any }) => {
-  response.body = "test";
+route.get("/", (context) => {
+  context.response.body = "test";
 });
 
 app.use(router.routes());
